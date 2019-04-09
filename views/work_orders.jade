@@ -3,8 +3,15 @@ extends layout
 block content
   h1= title
   p Welcome to #{msg}
-  ul
-  each val in [1, 2, 3, 4, 5]
-    li= val
-  a(href="new_work_orders")
+    div
+    table.table.table-hover
+        thead
+        tr: th Work Orders
+        tbody
+        each work_order in work_orders
+            tr
+            td=work_order.number
+            td=work_order.product_type
+            td=work_order.output
+    a(href="new_work_orders")
    button(type="button") New Work Order
