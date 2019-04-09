@@ -11,7 +11,7 @@ var wo = [
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-    res.render('work_orders', { title: 'Work Orders', msg: 'Good day!', work_orders = wo });
+    res.render('work_orders', { title: 'Work Orders', msg: 'Good day!', work_orders: wo });
 });
 
 module.exports = router;
