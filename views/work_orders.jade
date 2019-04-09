@@ -3,5 +3,8 @@ extends layout
 block content
   h1= title
   p Welcome to #{msg}
+  ul
+  each val in [1, 2, 3, 4, 5]
+    li= val
   a(href="new_work_orders")
    button(type="button") New Work Order
