@@ -1,17 +1,11 @@
 var express = require('express');
-var router = express.Router();
+var dal = require('../dal');
 
-var wo = [
- {
-     number: 'AZ123',
-     product_type: '4oz Amber Glass',
-     output: 20
- }
-];
+var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-    res.render('work_orders', { title: 'Work Orders', msg: 'Good day!', work_orders: wo });
+    res.render('work_orders', { title: 'Work Orders', msg: 'Good day!', work_orders: dal.getWorkOrders() });
 });
 
 module.exports = router;
