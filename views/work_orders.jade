@@ -12,11 +12,11 @@ block content
             th Output/Hour
             th Start Date
         tbody
-        each work_order in work_orders
+        each workOrder in workOrders
             tr
-            td=work_order.number
-            td=work_order.product_type
-            td=work_order.output
-            td=work_order.startDate
-    a(href="new_work_orders")
+            td=workOrder.number
+            td=workOrder.product_type
+            td=workOrder.output
+            td=workOrder.startDate
+    a(href="new_workOrders")
    button(type="button") New Work Order
