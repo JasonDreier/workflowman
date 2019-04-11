@@ -7,8 +7,6 @@ var wo = [
   }
 ]
 
-module.exports = {
-  getWorkOrders: function () {
-    return wo
-  }
+module.exports = function () {
+  return wo
 }
