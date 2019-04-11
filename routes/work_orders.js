@@ -5,7 +5,7 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-    res.render('work_orders', { title: 'Work Orders', msg: 'Good day!', work_orders: dal.getWorkOrders() });
+    res.render('work_orders', { title: 'Work Orders', msg: 'Good day!', workOrders: dal.getWorkOrders() });
 });
 
 module.exports = router;
