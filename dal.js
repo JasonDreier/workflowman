@@ -7,6 +7,21 @@ var wo = [
   }
 ]
 
-module.exports = function () {
+var productTypes = [
+  {
+    key: 1,
+    name: '4oz Amber Glass'
+  },
+  {
+    key: 2,
+    name: '12oz Oval Bottle'
+  }
+]
+
+exports.getWorkOrders = function () {
   return wo
+}
+
+exports.getProductTypes = function () {
+  return productTypes
 }

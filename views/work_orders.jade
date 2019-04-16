@@ -2,7 +2,7 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{msg}
+  p 
     div
     table.table.table-hover
         thead
@@ -15,8 +15,11 @@ block content
         each workOrder in workOrders
             tr
             td=workOrder.number
-            td=workOrder.product_type
+            td=workOrder.productType
             td=workOrder.output
             td=workOrder.startDate
-    a(href="new_workOrders")
+  a(href="new_work_orders")
    button(type="button") New Work Order
+  a(href="history_work_orders")
+   button(type="button") History Work Order
+  a(href="/") Back

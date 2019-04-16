@@ -1,11 +1,10 @@
 var Router = require('express')
-var dal = require('../dal')
 
 var router = Router()
 
 /* GET users listing. */
 router.get('/', function (req, res, next) {
-  res.render('work_orders', { title: 'Work Orders', workOrders: dal.getWorkOrders() })
+  res.render('history_work_orders', { title: 'History Work Orders' })
 })
 
 module.exports = router
